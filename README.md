@@ -62,7 +62,9 @@ source venv/bin/activate  # En Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
+
 3. **Configura las credenciales y variables necesarias:**
+
 
 - Edita el archivo config/settings.py con tus datos guardados en el .env:
 
@@ -75,6 +77,7 @@ pip install -r requirements.txt
 
 También asegúrate de tener instalado:
 
+
 - Tesseract OCR (recomendado vía instalador si usás Windows)
 
 - Credenciales de Google habilitadas (token y client_secret para Google Sheets)
@@ -82,17 +85,21 @@ También asegúrate de tener instalado:
 
 4. **Ejecuta el agente:**
 
+
 ```bash
 python main.py
 ```
 
-##🧠 **Cómo funciona**
+
+## 🧠 **Cómo funciona**
+
 1. Lee los emails no leídos y filtra los que contienen comprobantes de pago.
 2. Extrae texto desde los adjuntos (PDF o imagen) o el cuerpo del mensaje.
 3. Intenta parsear los datos directamente.
 4. Si no logra extraer toda la información, recurre al modelo Claude de Anthropic para interpretarlos con IA.
 5. Registra los datos en Google Sheets.
 6. Responde automáticamente al remitente confirmando la operación.
+
 
 📦 Dependencias
 Están detalladas en requirements.txt. Podés generarlo nuevamente con:
@@ -101,6 +108,7 @@ Están detalladas en requirements.txt. Podés generarlo nuevamente con:
 pip freeze > requirements.txt
 
 ```
+
 
 ## 📝 Licencia
 
@@ -111,7 +119,11 @@ Este proyecto está licenciado bajo los términos de la [Licencia MIT](LICENSE).
 ¡Contribuciones, mejoras o ideas son bienvenidas! Podés hacer un fork del repositorio y enviar un Pull Request, o abrir un Issue si encontrás algún problema.
 
 ## 📬 Contacto
+
 Silvina Palaoro
+
 📧 silvinapalaoro@gmail.com
+
 🌐 https://sil-palaoro-sdyw.vercel.app/
+
 🌐 https://www.linkedin.com/in/silvina-palaoro/
