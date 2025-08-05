@@ -75,6 +75,7 @@ pip install -r requirements.txt
 - ID de tu Google Sheet de Drive
 
 
+
 También asegúrate de tener instalado:
 
 
@@ -117,6 +118,7 @@ Este proyecto está licenciado bajo los términos de la [Licencia MIT](LICENSE).
 
 ## 🤝 Contribuciones
 ¡Contribuciones, mejoras o ideas son bienvenidas! Podés hacer un fork del repositorio y enviar un Pull Request, o abrir un Issue si encontrás algún problema.
+
 
 ## 📬 Contacto
 
