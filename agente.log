@@ -531,3 +531,240 @@ Nombre Entregado a través de
 2025-06-15 11:02:04,393 - INFO - Datos parseados: {'nombre': 'Iraya Morales Malla', 'monto': '140.00', 'fecha': '2025-01-07', 'destinatario': 'OLIVIA ISABEL DEANE', 'medio': 'Wise'}
 2025-06-15 11:02:06,685 - INFO - Registro guardado exitosamente
 2025-06-15 11:02:09,832 - INFO - ==================================================
+2025-08-05 22:35:18,837 - INFO - Iniciando agente...
+2025-08-05 22:35:30,640 - INFO - Emails relevantes encontrados: 0
+2025-08-05 22:35:30,641 - INFO - No se encontraron emails nuevos que coincidan con los filtros
+2025-08-05 22:40:52,936 - INFO - Iniciando agente...
+2025-08-05 22:41:21,366 - INFO - Emails relevantes encontrados: 5
+2025-08-05 22:41:47,528 - INFO - 
+--- Email #1 ---
+2025-08-05 22:41:47,528 - INFO - Asunto: Fwd: Recibo de pago
+2025-08-05 22:41:47,528 - INFO - De: Silvina Palaoro <silvinapalaoro@gmail.com>
+2025-08-05 22:41:47,528 - INFO - Fecha: Sat, 14 Jun 2025 21:23:08 -0300
+2025-08-05 22:41:47,559 - INFO - Texto extraído:
+ Olivia Isabel
+Deane
+
+Transaction Details
+
+Transaction ID
+6H6518765J995341P
+
+Money sent
+
+Paid with:
+
+PayPal Credit
+
+You paid
+
+Olivia Isabel Deane will receive
+
+Shipping Address
+
+107 Placid Woods Ct
+Sanford, FL 32773
+United States
+
+Transaction date
+February 21, 2025
+
+$240.00 USD
+
+$240.00 USD
+
+$240.00 USD
+$240.00 USD
+
+2025-08-05 22:41:47,575 - INFO - Activando LLM por datos insuficientes...
+2025-08-05 22:41:53,744 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-08-05 22:41:54,554 - INFO - Datos parseados: {'nombre': 'Silvina Palaoro <silvinapalaoro@gmail.com>', 'monto': '240.00', 'fecha': '2025-02-21', 'destinatario': 'olivia isabel deane', 'medio': 'PayPal Credit'}
+2025-08-05 22:42:10,575 - INFO - Registro guardado exitosamente
+2025-08-05 22:42:15,090 - INFO - ==================================================
+2025-08-05 22:42:16,152 - INFO - 
+--- Email #2 ---
+2025-08-05 22:42:16,152 - INFO - Asunto: Fwd: Comprobante febrero
+2025-08-05 22:42:16,152 - INFO - De: Silvina Palaoro <silvinapalaoro@gmail.com>
+2025-08-05 22:42:16,152 - INFO - Fecha: Sat, 14 Jun 2025 21:19:56 -0300
+2025-08-05 22:42:16,152 - INFO - Texto extraído:
+ »
+SUPERVIELLE
+
+Transferencia a otra cuenta
+
+Importe
+
+$ 56.200”
+
+Cuenta Origen
+CA ARS 030-4234654-1
+
+Titular Destino
+Silvina Graciela Palaoro
+
+CBU/CVU Destino
+0000003100003808565106
+
+Banco Destino
+Mercado Libre Srl
+
+Concepto
+Varios
+
+Canal de Origen
+App Supervielle
+
+Número de Control
+
+1LMP68NKJJZ66EZZ2R70EV
+
+Fecha Hora
+05 Feb 2025 09:52
+
+Sujeto a comisiones determinadas por el Banco
+Supervielle
+
+S.E.U.O.
+
+2025-08-05 22:42:16,169 - INFO - Activando LLM por datos insuficientes...
+2025-08-05 22:42:17,252 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-08-05 22:42:17,267 - INFO - Datos parseados: {'nombre': 'Silvina Palaoro <silvinapalaoro@gmail.com>', 'monto': '56200.00', 'fecha': '2025-02-05', 'destinatario': 'Silvina Graciela Palaoro', 'medio': 'Mercado Libre Srl'}
+2025-08-05 22:42:18,552 - INFO - Registro guardado exitosamente
+2025-08-05 22:42:22,052 - INFO - ==================================================
+2025-08-05 22:42:22,068 - WARNING - CropBox missing from /Page, defaulting to MediaBox
+2025-08-05 22:42:22,146 - WARNING - CropBox missing from /Page, defaulting to MediaBox
+2025-08-05 22:42:22,152 - WARNING - CropBox missing from /Page, defaulting to MediaBox
+2025-08-05 22:42:22,154 - WARNING - CropBox missing from /Page, defaulting to MediaBox
+2025-08-05 22:42:22,226 - WARNING - CropBox missing from /Page, defaulting to MediaBox
+2025-08-05 22:42:22,227 - WARNING - CropBox missing from /Page, defaulting to MediaBox
+2025-08-05 22:42:22,227 - INFO - 
+--- Email #3 ---
+2025-08-05 22:42:22,227 - INFO - Asunto: Fwd: Justificante de pago Doula
+2025-08-05 22:42:22,228 - INFO - De: Silvina Palaoro <silvinapalaoro@gmail.com>
+2025-08-05 22:42:22,228 - INFO - Fecha: Sat, 14 Jun 2025 21:17:39 -0300
+2025-08-05 22:42:22,228 - INFO - Texto extraído:
+ Ruralvía | Banca Digital https://bancadigital.ruralvia.com/CA-FRONT/NBE/web/particulares/#/m...
+Detalle de movimiento
+Datos de la operación
+Importe
+-221,44 €
+Comisiones
+0,00 €
+Fecha de operación
+02 Feb 2025
+Comercio
+Paypal *olideanex1
+Tipo de tarjeta
+Tarjeta de débito
+Emisor
+Paypal *olideanex1
+Tarjeta usada
+TARJETA MIXTA *0723
+Titular de la tarjeta
+gomez-manso-patricia
+Concepto
+serv profesionales no clasific
+1 de 1 02/02/2025, 21:14
+PayPal: Detalles de la transacción https://www.paypal.com/myaccount/activities/details/450489847G5912334
+Olivia Isabel Deane −220,00 $ USD
+OD
+2 de febrero de 2025 . Dinero enviado
+Pagado con Información de contacto
+Tarjeta de débito 221,44 €Enviar mensaje a Olivia Isabel
+VISA x-0723 Deane
+Verás "PAYPAL olideane+1@gmail.com
+*olideaneX1" en el
+extracto de tu Nota
+tarjeta.
+Programa Doula
+Tipo de cambio para la conversión dinero electrónico
+Datos
+221,44 € EUR = 220,00 $ USD
+Enviado a Olivia 220,00 $ USD
+1 EUR = 0,9935 US$ USD
+Isabel Deane
+Enviar a
+Total 220,00 
+2025-08-05 22:42:22,231 - INFO - Activando LLM por datos insuficientes...
+2025-08-05 22:42:23,368 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-08-05 22:42:23,385 - INFO - Datos parseados: {'nombre': 'patricia gomez manso', 'monto': '221.44', 'fecha': '2025-02-02', 'destinatario': 'olivia isabel deane', 'medio': 'PayPal'}
+2025-08-05 22:42:25,727 - INFO - Registro guardado exitosamente
+2025-08-05 22:42:28,686 - INFO - ==================================================
+2025-08-05 22:42:30,395 - INFO - 
+--- Email #4 ---
+2025-08-05 22:42:30,396 - INFO - Asunto: Fwd: Comprobante de pago
+2025-08-05 22:42:30,396 - INFO - De: Silvina Palaoro <silvinapalaoro@gmail.com>
+2025-08-05 22:42:30,397 - INFO - Fecha: Sat, 14 Jun 2025 17:28:07 -0300
+2025-08-05 22:42:30,397 - INFO - Texto extraído:
+ EY mercado
+pago
+
+Comprobante de transferencia
+Viernes, 31 de enero de 2025 a las 01:19 hs
+
+$ 75.000,00
+
+e De
+Sofía Castoldi
+
+CUIT/CUIL: 27-43232853-3
+Mercado Pago
+
+o Para
+Silvina Graciela Palaoro
+CUIT/CUIL: 27-29506072-2
+
+Mercado Pago
+
+Número de operación de Mercado Pago
+100499596777
+
+2025-08-05 22:42:30,399 - INFO - Activando LLM por datos insuficientes...
+2025-08-05 22:42:33,108 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-08-05 22:42:33,112 - INFO - Datos parseados: {'nombre': 'Sofía Castoldi', 'monto': '75000.00', 'fecha': '2025-01-31', 'destinatario': 'Silvina Graciela Palaoro', 'medio': 'Mercado Pago'}
+2025-08-05 22:42:35,242 - INFO - Registro guardado exitosamente
+2025-08-05 22:42:38,211 - INFO - ==================================================
+2025-08-05 22:42:38,215 - WARNING - CropBox missing from /Page, defaulting to MediaBox
+2025-08-05 22:42:38,217 - WARNING - CropBox missing from /Page, defaulting to MediaBox
+2025-08-05 22:42:38,323 - WARNING - CropBox missing from /Page, defaulting to MediaBox
+2025-08-05 22:42:38,323 - WARNING - CropBox missing from /Page, defaulting to MediaBox
+2025-08-05 22:42:38,324 - INFO - 
+--- Email #5 ---
+2025-08-05 22:42:38,324 - INFO - Asunto: Fwd: Comprobante de pago
+2025-08-05 22:42:38,324 - INFO - De: Silvina Palaoro <silvinapalaoro@gmail.com>
+2025-08-05 22:42:38,325 - INFO - Fecha: Sat, 14 Jun 2025 17:26:59 -0300
+2025-08-05 22:42:38,325 - INFO - Texto extraído:
+ Confirmación de transferencia
+Transferencia creada Financiado
+enero 07, 2025 18:05:33 CET enero 07, 2025 18:06:38 CET
+Pagado Trasferencia
+enero 07, 2025 #1366652393
+Número de usuario
+P22698345
+Tus datos
+Nombre Domicilio
+Iraya Morales Malla Calle Valeriano Pérez 18
+Guamasa La Laguna, 38330
+Spain
+Resumen de la transferencia
+Cantidad pagada por Iraya Morales Malla Comisiones por transferencia
+141,51 EUR Wise 0,00 EUR
+Método de pago 1,51 EUR
+Total 1,51 EUR
+Cantidad convertida Tipo de cambio
+140,00 EUR 1 EUR = 1,0000 EUR
+Total para OLIVIA ISABEL DEANE
+140,00 EUR
+Wise es el nombre comercial de Wise Europe SA, una institución de pago autorizada por el Banco Nacional de Bélgica, incorporada en
+Bélgica con el número de registro 0713629988 y oficina registrada en Rue Du Trone 100, box 3, 1050 Bruselas, Bélgica. https://wise.com
+¿Necesitas ayuda? Visita wise.com/help
+Page 1 of 2Se ha enviado a
+Nombre Referencia
+OLIVIA ISABEL DEANE Iraya Morales enero 2025
+Pagado desde
+Nombre Entregado a través de
+2025-08-05 22:42:38,328 - INFO - Activando LLM por datos insuficientes...
+2025-08-05 22:42:39,904 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-08-05 22:42:39,905 - INFO - Datos parseados: {'nombre': 'Iraya Morales Malla', 'monto': '140.00', 'fecha': '2025-01-07', 'destinatario': 'OLIVIA ISABEL DEANE', 'medio': 'Wise'}
+2025-08-05 22:42:42,061 - INFO - Registro guardado exitosamente
+2025-08-05 22:42:45,388 - INFO - ==================================================

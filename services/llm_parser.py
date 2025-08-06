@@ -1,17 +1,18 @@
 import anthropic
 
-from config.settings import ANTHROPIC_API_KEY
+from config.settings import ANTHROPIC_API_KEY, RECIPIENTS, RECIPIENTS_ALIASES
 
 client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 
 def build_llm_prompt(texto):
-    return f"""
+    recipients_list = '","'.join(RECIPIENTS)
+    prompt = f"""
         A continuación tienes el texto extraído de un comprobante de pago. Extrae los siguientes datos en formato JSON con claves en minúscula:
         
         - nombre: nombre completo de quien hizo el pago (originante)
         - monto: valor numérico del pago, sin símbolos, punto como separador decimal
         - fecha: fecha del pago en formato yyyy-mm-dd
-        - destinatario: debe ser uno de estos tres valores exactos: "Silvina Palaoro", "Olivia Deane" o "Olivia Isabel Deane"
+        - destinatario: debe ser uno de estos valores exactos: "{recipients_list}"
         - medio: medio de pago del destinatario, si se indica (ej: Banco Nación, PayPal, Wise, MercadoPago, etc.)
         
         Texto del comprobante:
@@ -25,19 +26,21 @@ def build_llm_prompt(texto):
         
         - No inventes el nombre del originante: si no aparece claramente en el texto, el campo "nombre" debe ser null.
         - Si aparece el nombre del destinatario pero no el pagador, no los confundas. "nombre" ≠ "destinatario".
-        - Si no se menciona el medio de pago pero el destinatario es Olivia, puedes inferir "Wise o PayPal?" (entre comillas). Si es Silvina, "Bco Nación o MP?".
+        - Si no se menciona el medio de pago pero el destinatario es {RECIPIENTS_ALIASES[0]}, puedes inferir "Wise o PayPal?" (entre comillas). Si es {RECIPIENTS_ALIASES[2]}, "Bco Nación o MP?".
         
         Ejemplo correcto:
         {{
           "nombre": null,
           "monto": "240.00",
           "fecha": "2025-02-21",
-          "destinatario": "Olivia Isabel Deane",
+          "destinatario": "{RECIPIENTS_ALIASES[0]}",
           "medio": "Wise o PayPal?"
         }}
         
         Responde sólo el JSON, sin explicaciones ni texto adicional.
         """
+        
+    return prompt
 
 
 def parse_with_llm(texto):

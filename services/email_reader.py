@@ -14,7 +14,7 @@ EMAIL_ACCOUNT = EMAIL_USER
 APP_PASSWORD = APP_PASSWORD  #Contraseña de aplicación
 SUBJECT_KEYWORDS = ["comprobante", "Re: Aviso de pago", "transferencia", "pago", "cuota", "matricula"]
 FOLDER = "inbox"
-DAYS_LIMIT = 15  # Días atrás para buscar correos relevantes
+DAYS_LIMIT = 60  # Días atrás para buscar correos relevantes
 IGNORED_SENDERS = IGNORED_SENDERS   #TODO agregar email de verdadero en .env cuando lo implementemos
 
 # Función auxiliar

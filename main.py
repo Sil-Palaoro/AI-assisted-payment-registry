@@ -1,7 +1,7 @@
 #Main py file for the AI-assisted-payment-registry
 import logging
 
-from config.settings import SHEET_ID
+from config.settings import RECIPIENTS, RECIPIENTS_ALIASES, SHEET_ID
 from services.email_reader import fetch_relevant_emails
 from services.excel_updater import append_payment_record
 from services.llm_parser import parse_with_llm
@@ -45,22 +45,30 @@ if __name__ == "__main__":
             logging.info(f"Fecha: {mail['date']}")           
             logging.info(f"Texto extraído:\n {extracted_text[:1000]}")  # muestra los primeros 1000 caracteres      
 
-
+            #Datos parseados
             parsed_data = parse_payment_data(extracted_text)
 
+            #Si los datos no son suficientes, activamos el LLM
             if not parsed_data["monto"] or not parsed_data["fecha"] or not parsed_data["nombre"]:
                 logging.info("Activando LLM por datos insuficientes...")
                 parsed_data = parse_with_llm(extracted_text)
 
+            #Si el LLM no pudo extraer el nombre del originante, usamos el remitente del email
+            def clean_payer_name(nombre):
+                if not parsed_data["nombre"]:
+                    return None
+                nombre_lower = nombre.lower()
+                for n in RECIPIENTS + RECIPIENTS_ALIASES:
+                    if n in nombre_lower:
+                        return None
+                return nombre
+            
+            parsed_data["nombre"] = clean_payer_name(parsed_data["nombre"]) or mail['from']
 
-            if (
-                not parsed_data["nombre"] 
-                or parsed_data["nombre"].strip().lower() == parsed_data["destinatario"].strip().lower()
-                ):
-                parsed_data["nombre"] = mail['from']
-
+            #Log de los datos parseados
             logging.info(f"Datos parseados: {parsed_data}")
 
+            #Si tenemos los datos necesarios, guardamos el registro 
             if parsed_data["monto"] and parsed_data["fecha"] and parsed_data["nombre"]:
                 append_payment_record(SHEET_ID, parsed_data)
                 logging.info("Registro guardado exitosamente")
@@ -75,7 +83,21 @@ if __name__ == "__main__":
 
 
             logging.info("="*50)    
+            
+    #Manejo de excepciones         
     except Exception as e:
         logging.exception(f"Error inesperado: {e}")
         import traceback
         traceback.print_exc()
+        
+        
+        
+
+    # if (not parsed_data["nombre"] or (
+    #         nombre_lower = nombre.lower()
+    #         for n in RECIPIENTS + RECIPIENTS_ALIASES:
+    #             if n in nombre_lower
+    #     )
+    #     # parsed_data["nombre"].strip().lower() == parsed_data["destinatario"].strip().lower()
+    #     ):
+    #     parsed_data["nombre"] = mail['from']
